@@ -24,7 +24,7 @@ public class WordCounter {
 					eof = true;
 				} else {
 					for (String str : line.split("\\s+")) {
-						String token = str.toLowerCase();
+						String token = StringUtils.lowerCase(str);
 						if (words.containsKey(token)) {
 							words.put(token, words.get(token) + 1);
 						} else {
